@@ -18,7 +18,6 @@ export default function ImagePicker({ label, name }) {
             return;
         }
 
-        console.log(file);
         const fileReader = new FileReader();
         fileReader.readAsDataURL(file);
         fileReader.onload = () => {
