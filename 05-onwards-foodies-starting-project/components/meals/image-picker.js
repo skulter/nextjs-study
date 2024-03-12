@@ -21,7 +21,6 @@ export default function ImagePicker({ label, name }) {
         const fileReader = new FileReader();
         fileReader.readAsDataURL(file);
         fileReader.onload = () => {
-            console.log(fileReader.result);
             setPickedImage(fileReader.result);
         };
     }
@@ -46,14 +45,14 @@ export default function ImagePicker({ label, name }) {
                     onChange={handleImageChange}
                     required
                 />
+                <button
+                    className={classes.button}
+                    type="button"
+                    onClick={handlePickClick}
+                >
+                    Pick an Image
+                </button>
             </div>
-            <button
-                className={classes.button}
-                type="button"
-                onClick={handlePickClick}
-            >
-                Pick an Image
-            </button>
         </div>
     );
 }
