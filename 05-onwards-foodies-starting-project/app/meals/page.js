@@ -15,6 +15,7 @@ async function Meals() {
 }
 
 export default async function MealsPage() {
+    console.log("test");
     return (
         <>
             <header className={classes.header}>
